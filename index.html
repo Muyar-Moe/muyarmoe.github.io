@@ -3,210 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muyar Moe | Professional Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Muyar Moe - Professional Portfolio</title>
     <style>
-        :root {
-            --deep-blue: #1B365D;
-            --beige: #F4F1EA;
-            --white: #FFFFFF;
-            --text-dark: #2C3E50;
-            --accent-gold: #C5A880;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        
-        body { background-color: var(--beige); color: var(--text-dark); line-height: 1.7; }
-        
-        /* Hero Section */
-        .hero { 
-            background: var(--deep-blue); 
-            color: var(--white); 
-            padding: 100px 20px; 
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        /* Decorative Background Elements */
-        .hero::before {
-            content: ''; position: absolute; top: -50px; left: -50px; width: 200px; height: 200px;
-            background: rgba(244, 241, 234, 0.05); border-radius: 50%;
-        }
-        .hero::after {
-            content: ''; position: absolute; bottom: -100px; right: -50px; width: 300px; height: 300px;
-            background: rgba(244, 241, 234, 0.05); border-radius: 50%;
-        }
-
-        .profile-wrapper { position: relative; display: inline-block; margin-bottom: 25px; z-index: 1; }
-        .profile-img { 
-            width: 190px; height: 190px; border-radius: 50%; 
-            border: 6px solid var(--beige); object-fit: cover; 
-            background-color: var(--white);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        }
-
-        .hero h1 { font-size: 3rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 5px; }
-        .hero h2 { font-size: 1.3rem; font-weight: 300; color: var(--beige); margin-bottom: 25px; opacity: 0.9; }
-        .hero p { max-width: 650px; margin: 0 auto 35px auto; font-size: 1.1rem; color: #EFEFEF; font-weight: 300; }
-        
-        /* Buttons */
-        .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; z-index: 1; position: relative; }
-        .btn { 
-            padding: 14px 32px; border-radius: 50px; font-weight: 500; text-decoration: none; 
-            transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 10px; font-size: 1rem;
-        }
-        .btn-primary { background-color: var(--beige); color: var(--deep-blue); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .btn-primary:hover { background-color: var(--white); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
-        .btn-outline { background-color: transparent; border: 2px solid var(--beige); color: var(--beige); }
-        .btn-outline:hover { background-color: var(--beige); color: var(--deep-blue); }
-        
-        /* Main Container */
-        .container { max-width: 1100px; margin: -50px auto 50px auto; padding: 0 20px; position: relative; z-index: 10; }
-        
-        .card { 
-            background: var(--white); padding: 50px; border-radius: 20px; 
-            box-shadow: 0 10px 40px rgba(0,0,0,0.04); margin-bottom: 40px; 
-            border-top: 5px solid var(--deep-blue);
-        }
-        
-        .section-title { 
-            font-size: 1.8rem; color: var(--deep-blue); margin-bottom: 35px; 
-            display: flex; align-items: center; gap: 15px; font-weight: 600;
-        }
-        
-        /* Software Logos Grid */
-        .software-grid { 
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 25px; 
-        }
-        .software-item { 
-            display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            padding: 25px 15px; background: var(--beige); border-radius: 15px; 
-            transition: all 0.3s ease; gap: 15px; text-align: center; font-weight: 500; font-size: 0.95rem;
-        }
-        .software-item:hover { 
-            transform: translateY(-5px); background: var(--white); box-shadow: 0 10px 25px rgba(0,0,0,0.06); 
-        }
-        .software-item img { height: 50px; object-fit: contain; }
-        
-        /* Standard Skills */
-        .skills-list { display: flex; flex-wrap: wrap; gap: 15px; }
-        .skill-tag { 
-            background: var(--beige); color: var(--deep-blue); padding: 10px 20px; 
-            border-radius: 50px; font-weight: 500; font-size: 0.95rem; 
-            border: 1px solid rgba(27, 54, 93, 0.1);
-        }
-
-        /* Timeline */
-        .timeline { position: relative; padding-left: 30px; }
-        .timeline::before { 
-            content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--beige); 
-        }
-        .timeline-item { margin-bottom: 35px; position: relative; }
-        .timeline-item::before { 
-            content: ''; position: absolute; left: -36px; top: 5px; width: 14px; height: 14px; 
-            background: var(--deep-blue); border-radius: 50%; border: 3px solid var(--white); box-shadow: 0 0 0 3px var(--beige);
-        }
-        .timeline-item h3 { color: var(--deep-blue); font-size: 1.3rem; margin-bottom: 5px; }
-        .timeline-item .date { display: inline-block; background: var(--beige); color: var(--deep-blue); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
-        
-        footer { text-align: center; padding: 40px; color: var(--text-dark); opacity: 0.7; font-size: 0.9rem; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; background-color: #f4f7f6; }
+        .container { max-width: 800px; margin: auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        header { text-align: center; margin-bottom: 30px; }
+        h1 { color: #2c3e50; margin-bottom: 5px; }
+        .contact { color: #555; margin-bottom: 20px; }
+        .section { margin-bottom: 25px; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; display: inline-block; padding-bottom: 5px; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #f8f9fa; }
     </style>
 </head>
 <body>
-
-    <div class="hero">
-        <div class="profile-wrapper">
-            <img src="https://github.com/Muyar-Moe.png" alt="Muyar Moe" class="profile-img" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
-        </div>
-        <h1>Muyar Moe</h1>
-        <h2>Senior Accountant | Singapore Compliance Expert</h2>
-        <p>Combining 11 years of deep financial expertise in the construction sector with modern accounting technologies to drive accurate reporting and business growth.</p>
-        
-        <div class="btn-group">
-            <a href="resume.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-file-pdf"></i> Download Resume</a>
-            <a href="https://www.linkedin.com/in/muyarmoe2794/" target="_blank" class="btn btn-outline"><i class="fab fa-linkedin-in"></i> Connect on LinkedIn</a>
-        </div>
-    </div>
-
     <div class="container">
-        
-        <div class="card">
-            <h2 class="section-title"><i class="fas fa-layer-group"></i> Software Proficiency</h2>
-            <div class="software-grid">
-                <!-- Colorful Logos included via CDN links -->
-                <div class="software-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel">
-                    <span>MS Excel</span>
-                </div>
-                <div class="software-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg" alt="Word">
-                    <span>MS Word</span>
-                </div>
-                <div class="software-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg" alt="PowerPoint">
-                    <span>PowerPoint</span>
-                </div>
-                <div class="software-item">
-                    <img src="https://cdn.worldvectorlogo.com/logos/xero.svg" alt="Xero">
-                    <span>Xero</span>
-                </div>
-                <div class="software-item">
-                    <img src="https://cdn.worldvectorlogo.com/logos/quickbooks-logo.svg" alt="QuickBooks">
-                    <span>QuickBooks</span>
-                </div>
-                <div class="software-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/MYOB_Logo.svg/512px-MYOB_Logo.svg.png" alt="MYOB">
-                    <span>MYOB</span>
-                </div>
+        <header>
+            <h1>MUYAR MOE</h1>
+            <p><strong>Accounts Executive | Financial Reporting | Full Set Accounting</strong></p>
+            <div class="contact">
+                📞 +65 8597 9328 | 📧 muyarmoe2714@gmail.com<br>
+                📍 Bendemeer Road, Singapore 330047<br>
+                <a href="https://www.linkedin.com/in/muyarmoe2794/">LinkedIn</a> | <a href="https://github.com/Muyar-Moe">GitHub</a>
             </div>
-        </div>
+        </header>
 
-        <div class="card">
-            <h2 class="section-title"><i class="fas fa-chart-pie"></i> Core Competencies</h2>
-            <div class="skills-list">
-                <div class="skill-tag">Full-Set Accounting</div>
-                <div class="skill-tag">SFRS Compliance</div>
-                <div class="skill-tag">GST & CPF Filings</div>
-                <div class="skill-tag">ECI Submission</div>
-                <div class="skill-tag">Construction Job Costing</div>
-                <div class="skill-tag">Financial Reporting</div>
-                <div class="skill-tag">Bank Reconciliation</div>
-            </div>
-        </div>
+        <section class="section">
+            <h2>Summary</h2>
+            <p>Detail-oriented Accountant with 11 years of experience in full set accounting, taxation, and audit coordination. Experienced in preparing financial statements in compliance with Singapore Financial Reporting Standards (SGFRS), and familiar with GST, CPF & ECI filing. Proficient in Xero, QuickBooks, and MYOB.</p>
+        </section>
 
-        <div class="card">
-            <h2 class="section-title"><i class="fas fa-user-graduate"></i> Education & Certifications</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="date">ACCA Registered (2020)</span>
-                    <h3>ACCA / F3 Exemption</h3>
-                    <p>Pursuing global accounting standard certifications to enhance financial advisory capabilities.</p>
-                </div>
-                <div class="timeline-item">
-                    <span class="date">Completed 2014</span>
-                    <h3>LCCI Level 3</h3>
-                    <p>Advanced diploma in accounting and finance.</p>
-                </div>
-                <div class="timeline-item">
-                    <span class="date">Professional Qualification</span>
-                    <h3>Diploma in Management Accounting</h3>
-                    <p>UK Certified professional qualification emphasizing strategic management and cost control.</p>
-                </div>
-                <div class="timeline-item">
-                    <span class="date">Undergraduate</span>
-                    <h3>B.Sc. Chemistry</h3>
-                    <p>Dagon University, Myanmar</p>
-                </div>
-            </div>
-        </div>
+        <section class="section">
+            <h2>Experience</h2>
+            <h3>Senior Accountant and Admin - Myanmar Geoharbour Engineering and Construction Co., Ltd.</h3>
+            <ul>
+                <li>Managed AR collections and AP payments.</li>
+                <li>Reconciled and closed monthly accounts; prepared statutory tax returns.</li>
+                <li>Administered payroll and personal income tax calculations.</li>
+            </ul>
 
+            <h3>Senior Accountant - Smart Builder Construction Co., Ltd</h3>
+            <ul>
+                <li>Conducted cost variance analysis and tracked multi-site project expenses.</li>
+                <li>Prepared tender budgets, project quotations, and material cost estimates.</li>
+                <li>Managed full sets of accounts (AR, AP, GL) and maintained fixed asset registers.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Certifications & Education</h2>
+            <table>
+                <tr>
+                    <th>Certification</th>
+                    <th>Institution</th>
+                </tr>
+                <tr>
+                    <td>Diploma in Management Accounting</td>
+                    <td>LCCI</td>
+                </tr>
+                <tr>
+                    <td>Xero Certified Professional</td>
+                    <td>Xero</td>
+                </tr>
+                <tr>
+                    <td>Certified in Singapore Professional Account and Admin</td>
+                    <td>SingAcc Professional Services</td>
+                </tr>
+            </table>
+        </section>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Muyar Moe | Designed for Excellence</p>
-    </footer>
-
 </body>
 </html>
