@@ -3,69 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muyar Moe | Professional Portfolio</title>
+    <title>Muyar Moe | Senior Accountant</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --deep-blue: #1B365D;
-            --beige: #F4F1EA;
-            --white: #FFFFFF;
-            --text-dark: #2C3E50;
-            --accent-gold: #C5A880;
-        }
+        :root { --deep-blue: #1B365D; --beige: #F4F1EA; --white: #FFFFFF; --text-dark: #2C3E50; --accent-gold: #C5A880; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         body { background-color: var(--beige); color: var(--text-dark); line-height: 1.7; }
         
-        /* Navigation Bar */
-        .navbar {
-            background: var(--deep-blue);
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        /* Navbar */
+        .navbar { background: var(--deep-blue); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
         .navbar .logo { color: var(--white); font-weight: 700; font-size: 1.2rem; text-decoration: none; }
         .nav-links { display: flex; gap: 20px; }
-        .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: var(--accent-gold); }
 
-        /* Hero Section */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 80px;
-            gap: 40px;
-            background: var(--deep-blue);
-            color: var(--white);
-            flex-wrap: wrap;
-            min-height: calc(100vh - 80px);
-        }
-        .hero-text-side { flex: 1; min-width: 300px; text-align: left; }
-        .hero-text-side h1 { font-size: 3rem; font-weight: 700; margin-bottom: 10px; }
-        .hero-text-side h2 { font-size: 1.3rem; font-weight: 300; color: var(--beige); margin-bottom: 20px; opacity: 0.9; }
-        .hero-text-side p { font-size: 1.1rem; line-height: 1.6; color: #EFEFEF; margin-bottom: 25px; max-width: 600px; font-weight: 300; }
+        /* Hero */
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 60px 80px; gap: 40px; background: var(--deep-blue); color: var(--white); flex-wrap: wrap; }
+        .hero-text-side { flex: 1; min-width: 300px; }
+        .hero-text-side h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero-text-side p { font-size: 1.1rem; color: #EFEFEF; max-width: 600px; margin-bottom: 25px; }
+        .btn { background-color: var(--beige); color: var(--deep-blue); padding: 12px 25px; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
         
-        .hero-image-side { flex: 1; display: flex; justify-content: center; align-items: center; min-width: 280px; }
-        .profile-img-container {
-            width: 320px; height: 320px; border-radius: 50%; overflow: hidden;
-            border: 6px solid var(--beige); background-color: var(--white);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-        }
-        .profile-img-final { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+        .profile-img-container { width: 300px; height: 300px; border-radius: 50%; overflow: hidden; border: 6px solid var(--beige); }
+        .profile-img-final { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Sections */
+        .section-padding { padding: 60px 80px; }
+        .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
+        .expertise-card { background: var(--white); padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         
-        .btn {
-            background-color: var(--beige); color: var(--deep-blue); text-decoration: none;
-            padding: 12px 25px; border-radius: 50px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;
-            transition: transform 0.3s;
-        }
-        .btn:hover { transform: translateY(-3px); }
+        footer { background: var(--deep-blue); color: white; text-align: center; padding: 30px; }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
     <nav class="navbar">
         <a href="index.html" class="logo">Muyar Moe</a>
         <div class="nav-links">
@@ -76,22 +48,51 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <div class="hero">
         <div class="hero-text-side">
             <h1>Muyar Moe</h1>
-            <h2>Senior Accountant | Singapore Compliance Expert</h2>
-            <p>Combining 11 years of deep financial expertise in the construction sector with modern accounting technologies to drive accurate reporting and business growth.</p>
-            <div style="margin-top: 20px;">
-                <a href="resume.pdf" target="_blank" class="btn"><i class="fas fa-file-download"></i> MY RESUME</a>
-            </div>
+            <p>Senior Accountant with 11 years of deep financial expertise in the construction sector, specializing in Singapore tax compliance and modern accounting technologies.</p>
+            <a href="resume.pdf" class="btn"><i class="fas fa-file-download"></i> MY RESUME</a>
         </div>
-        <div class="hero-image-side">
-            <div class="profile-img-container">
-                <img src="Logo/Muyar Profile.png" alt="Muyar Moe" class="profile-img-final">
-            </div>
+        <div class="profile-img-container">
+            <img src="Logo/Muyar Profile.png" alt="Muyar Moe" class="profile-img-final">
         </div>
     </div>
+
+    <!-- Summary Section -->
+    <section class="section-padding" style="background: white; text-align: center;">
+        <h3 style="color: var(--deep-blue); font-size: 1.8rem; margin-bottom: 20px;">Why Choose Me?</h3>
+        <p style="max-width: 800px; margin: 0 auto; color: #555; line-height: 1.8;">
+            With over 11 years of professional experience as an accountant at a medium-sized construction company, I possess comprehensive knowledge in end-to-end financial reporting. 
+            I am highly proficient in Singapore's regulatory frameworks (GST, CPF, ECI, SGFRS) and comfortable working in fast-paced environments, including overtime when required.
+        </p>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="section-padding">
+        <h3 style="color: var(--deep-blue); font-size: 1.8rem; text-align: center; margin-bottom: 20px;">Core Expertise</h3>
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <i class="fas fa-chart-line" style="font-size: 2rem; color: var(--deep-blue);"></i>
+                <h4 style="margin: 15px 0;">Financial Reporting</h4>
+                <p>Accurate monthly, quarterly, and annual financial statements.</p>
+            </div>
+            <div class="expertise-card">
+                <i class="fas fa-university" style="font-size: 2rem; color: var(--deep-blue);"></i>
+                <h4 style="margin: 15px 0;">Compliance Expert</h4>
+                <p>Expertise in GST, CPF, ECI, and SGFRS reporting requirements.</p>
+            </div>
+            <div class="expertise-card">
+                <i class="fas fa-laptop-code" style="font-size: 2rem; color: var(--deep-blue);"></i>
+                <h4 style="margin: 15px 0;">Tech Savvy</h4>
+                <p>Advanced proficiency in Xero, QuickBooks, and MYOB.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Muyar Moe. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
