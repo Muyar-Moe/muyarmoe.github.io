@@ -1,3 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muyar Moe | Professional Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-blue: #1B365D;
+            --beige: #F4F1EA;
+            --white: #FFFFFF;
+            --text-dark: #2C3E50;
+            --accent-gold: #C5A880;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        
+        body { background-color: var(--beige); color: var(--text-dark); line-height: 1.7; }
+        
+        /* Hero Section */
+        .hero { 
+            background: var(--deep-blue); 
+            color: var(--white); 
+            padding: 100px 20px; 
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Decorative Background Elements */
+        .hero::before {
+            content: ''; position: absolute; top: -50px; left: -50px; width: 200px; height: 200px;
+            background: rgba(244, 241, 234, 0.05); border-radius: 50%;
+        }
+        .hero::after {
+            content: ''; position: absolute; bottom: -100px; right: -50px; width: 300px; height: 300px;
+            background: rgba(244, 241, 234, 0.05); border-radius: 50%;
+        }
+
+        .profile-wrapper { position: relative; display: inline-block; margin-bottom: 25px; z-index: 1; }
+        .profile-img { 
+            width: 190px; height: 190px; border-radius: 50%; 
+            border: 6px solid var(--beige); object-fit: cover; 
+            background-color: var(--white);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .hero h1 { font-size: 3rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 5px; }
+        .hero h2 { font-size: 1.3rem; font-weight: 300; color: var(--beige); margin-bottom: 25px; opacity: 0.9; }
+        .hero p { max-width: 650px; margin: 0 auto 35px auto; font-size: 1.1rem; color: #EFEFEF; font-weight: 300; }
+        
+        /* Buttons */
+        .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; z-index: 1; position: relative; }
+        .btn { 
+            padding: 14px 32px; border-radius: 50px; font-weight: 500; text-decoration: none; 
+            transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 10px; font-size: 1rem;
+        }
+        .btn-primary { background-color: var(--beige); color: var(--deep-blue); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .btn-primary:hover { background-color: var(--white); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .btn-outline { background-color: transparent; border: 2px solid var(--beige); color: var(--beige); }
+        .btn-outline:hover { background-color: var(--beige); color: var(--deep-blue); }
+        
+        /* Main Container */
+        .container { max-width: 1100px; margin: -50px auto 50px auto; padding: 0 20px; position: relative; z-index: 10; }
+        
+        .card { 
+            background: var(--white); padding: 50px; border-radius: 20px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04); margin-bottom: 40px; 
+            border-top: 5px solid var(--deep-blue);
+        }
+        
+        .section-title { 
+            font-size: 1.8rem; color: var(--deep-blue); margin-bottom: 35px; 
+            display: flex; align-items: center; gap: 15px; font-weight: 600;
+        }
+        
+        /* Software Logos Grid */
+        .software-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 25px; 
+        }
+        .software-item { 
+            display: flex; flex-direction: column; align-items: center; justify-content: center; 
+            padding: 25px 15px; background: var(--beige); border-radius: 15px; 
+            transition: all 0.3s ease; gap: 15px; text-align: center; font-weight: 500; font-size: 0.95rem;
+        }
+        .software-item:hover { 
+            transform: translateY(-5px); background: var(--white); box-shadow: 0 10px 25px rgba(0,0,0,0.06); 
+        }
+        .software-item img { height: 50px; object-fit: contain; }
+        
+        /* Standard Skills */
+        .skills-list { display: flex; flex-wrap: wrap; gap: 15px; }
+        .skill-tag { 
+            background: var(--beige); color: var(--deep-blue); padding: 10px 20px; 
+            border-radius: 50px; font-weight: 500; font-size: 0.95rem; 
+            border: 1px solid rgba(27, 54, 93, 0.1);
+        }
 
         /* Timeline */
         .timeline { position: relative; padding-left: 30px; }
