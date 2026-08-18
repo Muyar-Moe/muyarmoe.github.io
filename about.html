@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Muyar Moe</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --deep-blue: #1B365D; --beige: #F4F1EA; --white: #FFFFFF; --text-dark: #2C3E50; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--beige); color: var(--text-dark); line-height: 1.7; }
+        
+        .navbar {
+            background: var(--deep-blue); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .navbar .logo { color: var(--white); font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: #C5A880; }
+
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .card { 
+            background: var(--white); padding: 40px; border-radius: 20px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04); margin-bottom: 30px; 
+            border-top: 5px solid var(--deep-blue);
+        }
+        .section-title { font-size: 1.8rem; color: var(--deep-blue); margin-bottom: 25px; display: flex; align-items: center; gap: 15px; }
+
+        /* Timeline */
+        .timeline { position: relative; padding-left: 30px; }
+        .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--beige); }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { 
+            content: ''; position: absolute; left: -36px; top: 5px; width: 14px; height: 14px; 
+            background: var(--deep-blue); border-radius: 50%; border: 3px solid var(--white); box-shadow: 0 0 0 3px var(--beige);
+        }
+        .timeline-item h3 { color: var(--deep-blue); font-size: 1.2rem; margin-bottom: 5px; }
+        .timeline-item span { display: inline-block; background: var(--beige); color: var(--deep-blue); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Muyar Moe</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About & Education</a>
+            <a href="skills.html">Skills & Certificates</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- About Me Section -->
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-user"></i> About Me</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                I am a dedicated Senior Accountant with over 11 years of extensive professional experience in the construction sector. Specializing in full-set accounting, financial reporting, and corporate compliance in Singapore, I combine deep financial expertise with modern accounting technologies like Xero, QuickBooks, and MYOB. My goal is to drive accurate financial reporting, streamline tax processes (GST, CPF, ECI, SGFRS), and support strategic business growth.
+            </p>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-user-graduate"></i> Education & Certifications</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span>ACCA</span>
+                    <h3>ACCA / F3 Exemption</h3>
+                    <p>Pursuing global accounting standard certifications to enhance financial advisory capabilities.</p>
+                </div>
+                <div class="timeline-item">
+                    <span>Completed 2014</span>
+                    <h3>LCCI Level 3</h3>
+                    <p>Advanced diploma in accounting and finance.</p>
+                </div>
+                <div class="timeline-item">
+                    <span>Professional Qualification</span>
+                    <h3>Diploma in Management Accounting</h3>
+                    <p>UK Certified professional qualification emphasizing strategic management and cost control.</p>
+                </div>
+                <div class="timeline-item">
+                    <span>Graduated 2013</span>
+                    <h3>B.Sc. Chemistry</h3>
+                    <p>Dagon University, Myanmar</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
