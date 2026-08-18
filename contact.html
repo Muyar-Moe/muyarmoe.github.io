@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Muyar Moe</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --deep-blue: #1B365D; --beige: #F4F1EA; --white: #FFFFFF; --text-dark: #2C3E50; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--beige); color: var(--text-dark); line-height: 1.7; }
+        
+        .navbar {
+            background: var(--deep-blue); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .navbar .logo { color: var(--white); font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: #C5A880; }
+
+        .container { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+        .contact-card-box {
+            background: var(--white); padding: 50px; border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04); border-top: 5px solid var(--deep-blue);
+        }
+        .contact-grid { display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap; }
+        .contact-card {
+            background: var(--beige); padding: 15px 25px; border-radius: 8px;
+            display: flex; align-items: center; gap: 12px; text-decoration: none;
+            color: var(--text-dark); font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s ease; border: 1px solid #eaeaea;
+        }
+        .contact-card:hover { transform: translateY(-3px); background-color: var(--deep-blue); color: var(--white); }
+        .contact-card:hover i { color: #C5A880; }
+        .contact-card i { font-size: 18px; color: var(--deep-blue); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Muyar Moe</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About & Education</a>
+            <a href="skills.html">Skills & Certificates</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="contact-card-box">
+            <h2 style="font-size: 1.8rem; color: var(--deep-blue); margin-bottom: 15px;">Get In Touch</h2>
+            <p style="font-size: 1.05rem;">I am open to new opportunities at any location and comfortable working overtime during busy periods.</p>
+            
+            <div class="contact-grid">
+                <a href="mailto:muyarmoe2714@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email Me</span>
+                </a>
+                <a href="https://www.linkedin.com/in/muyarmoe2794" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn Profile</span>
+                </a>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Open to any location</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

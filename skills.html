@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Certificates | Muyar Moe</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --deep-blue: #1B365D; --beige: #F4F1EA; --white: #FFFFFF; --text-dark: #2C3E50; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--beige); color: var(--text-dark); line-height: 1.7; }
+        
+        .navbar {
+            background: var(--deep-blue); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center;
+        }
+        .navbar .logo { color: var(--white); font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: #C5A880; }
+
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .card { 
+            background: var(--white); padding: 40px; border-radius: 20px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04); margin-bottom: 30px; 
+            border-top: 5px solid var(--deep-blue);
+        }
+        .section-title { font-size: 1.8rem; color: var(--deep-blue); margin-bottom: 25px; display: flex; align-items: center; gap: 15px; }
+
+        /* Software Grid */
+        .software-grid { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 15px; }
+        .software-item {
+            background: var(--white); border: 1px solid #eaeaea; border-radius: 12px;
+            padding: 20px; text-align: center; width: 130px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .software-item:hover { transform: translateY(-5px); border-color: var(--deep-blue); }
+        .software-item img { width: 45px; height: 45px; object-fit: contain; margin-bottom: 10px; }
+        .software-item span { font-size: 14px; font-weight: 500; color: var(--text-dark); display: block; }
+
+        /* Skills Tags */
+        .skills-list { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px; }
+        .skill-tag { 
+            background: var(--beige); color: var(--deep-blue); padding: 10px 20px; 
+            border-radius: 50px; font-weight: 500; font-size: 0.95rem; border: 1px solid rgba(27, 54, 93, 0.1);
+        }
+
+        /* Certificates Flex */
+        .cert-container { display: flex; flex-wrap: wrap; gap: 30px; margin-top: 15px; }
+        .cert-card { background: var(--beige); padding: 20px; border-radius: 12px; width: 280px; border: 1px solid #eaeaea; }
+        .cert-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Muyar Moe</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About & Education</a>
+            <a href="skills.html" class="active">Skills & Certificates</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Skills Section -->
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-layer-group"></i> Skills & Expertise</h2>
+            
+            <h3 style="font-size: 1.2rem; color: var(--deep-blue); margin-bottom: 10px;">Software Proficiency</h3>
+            <div class="software-grid" style="margin-bottom: 30px;">
+                <div class="software-item"><img src="Logo/excel-logo.png" alt="Excel"><span>MS Excel</span></div>
+                <div class="software-item"><img src="Logo/microsoft-word-logo.png" alt="Word"><span>MS Word</span></div>
+                <div class="software-item"><img src="Logo/powerpoint-logo.png" alt="PowerPoint"><span>PowerPoint</span></div>
+                <div class="software-item"><img src="https://cdn.worldvectorlogo.com/logos/xero.svg" alt="Xero"><span>Xero</span></div>
+                <div class="software-item"><img src="Logo/quickbooks-logo.png" alt="QuickBooks"><span>QuickBooks</span></div>
+                <div class="software-item"><img src="Logo/myob-logo.png" alt="MYOB"><span>MYOB</span></div>
+            </div>
+
+            <h3 style="font-size: 1.2rem; color: var(--deep-blue); margin-bottom: 10px;">Core Competencies & Compliance</h3>
+            <div class="skills-list">
+                <div class="skill-tag">Full-Set Accounting</div>
+                <div class="skill-tag">SGFRS Compliance</div>
+                <div class="skill-tag">GST & CPF Filings</div>
+                <div class="skill-tag">ECI Submission</div>
+                <div class="skill-tag">Construction Job Costing</div>
+                <div class="skill-tag">Financial Reporting</div>
+                <div class="skill-tag">Bank Reconciliation</div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-certificate"></i> Certificates</h2>
+            <div class="cert-container">
+                <div class="cert-card">
+                    <img src="Logo/lcci-cert.jpg" alt="LCCI Level 3">
+                    <h3 style="font-size: 1.1rem; color: var(--deep-blue); margin-bottom: 5px;">LCCI Level 3</h3>
+                    <p style="font-size: 0.9rem; color: #666;">Completed in 2014</p>
+                </div>
+                <div class="cert-card">
+                    <img src="Logo/management-accounting-cert.jpg" alt="Diploma in Management Accounting">
+                    <h3 style="font-size: 1.1rem; color: var(--deep-blue); margin-bottom: 5px;">Diploma in Management Accounting</h3>
+                    <p style="font-size: 0.9rem; color: #666;">Professional Qualification</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
