@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muyar Moe | Senior Accountant Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f4f7f6;
+            --text-main: #333;
+            --text-muted: #666;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: #f9fbfd; color: var(--text-main); line-height: 1.6; }
+        
+        /* Header Section */
+        .hero { background: linear-gradient(135deg, #0056b3 0%, #003d82 100%); color: white; padding: 80px 20px; text-align: center; }
+        .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 5px solid white; margin-bottom: 20px; object-fit: cover; background-color: #fff; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 10px; font-weight: 700; }
+        .hero h2 { font-size: 1.5rem; font-weight: 400; color: #d0e1f9; margin-bottom: 20px; }
+        .hero p { max-width: 600px; margin: 0 auto 30px auto; font-size: 1.1rem; color: #e6f0fa; }
+        
+        /* Action Buttons */
+        .btn-group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .btn { padding: 12px 30px; border-radius: 30px; font-weight: 600; text-decoration: none; transition: 0.3s; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-primary { background-color: #fff; color: var(--primary-color); }
+        .btn-primary:hover { background-color: #e6f0fa; }
+        .btn-outline { background-color: transparent; border: 2px solid #fff; color: #fff; }
+        .btn-outline:hover { background-color: #fff; color: var(--primary-color); }
+        
+        /* Main Container */
+        .container { max-width: 1000px; margin: -40px auto 40px auto; padding: 0 20px; position: relative; z-index: 10; }
+        .card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        
+        .section-title { font-size: 1.6rem; color: var(--primary-color); margin-bottom: 25px; border-bottom: 2px solid #eef2f5; padding-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        
+        /* Grid Layouts */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .skill-item { display: flex; align-items: center; gap: 15px; padding: 15px; background: var(--secondary-color); border-radius: 8px; font-weight: 500; }
+        .skill-item i { font-size: 1.5rem; color: var(--primary-color); }
+        
+        .timeline-item { margin-bottom: 20px; padding-left: 20px; border-left: 3px solid var(--primary-color); position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--primary-color); border-radius: 50%; }
+        .timeline-item h3 { color: var(--text-main); font-size: 1.2rem; }
+        .timeline-item .date { color: var(--primary-color); font-weight: 600; font-size: 0.9rem; margin-bottom: 5px; }
+        .timeline-item p { color: var(--text-muted); }
+
+        footer { text-align: center; padding: 30px; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <img src="https://github.com/Muyar-Moe.png" alt="Muyar Moe" class="profile-img" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
+        <h1>Muyar Moe</h1>
+        <h2>Senior Accountant | Financial Reporting | Singapore Compliance</h2>
+        <p>Detail-oriented finance professional with 11 years of experience in the construction sector. Specialized in full-set accounting, GST/CPF/ECI compliance, and financial reporting under SGFRS.</p>
+        
+        <div class="btn-group">
+            <a href="resume.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-download"></i> MY RESUME</a>
+            <a href="https://www.linkedin.com/in/muyarmoe2794/" target="_blank" class="btn btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="mailto:muyarmoe2794@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Email Me</a>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Summary</h2>
+            <p>I bring over a decade of hands-on experience working in mid-sized domestic construction companies. I am highly proficient in managing end-to-end accounting operations, ensuring compliance with Singapore Financial Reporting Standards (SGFRS), and modernizing data workflows to be more efficient.</p>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-laptop-code"></i> Accounting Systems & Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><i class="fas fa-file-invoice-dollar"></i> Xero & QuickBooks</div>
+                <div class="skill-item"><i class="fas fa-calculator"></i> MYOB ERP</div>
+                <div class="skill-item"><i class="fas fa-chart-line"></i> Full-Set Accounting</div>
+                <div class="skill-item"><i class="fas fa-landmark"></i> GST, CPF & ECI</div>
+                <div class="skill-item"><i class="fas fa-building"></i> Construction Costing</div>
+                <div class="skill-item"><i class="fas fa-table"></i> Advanced Excel</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education & Certifications</h2>
+            
+            <div class="timeline-item">
+                <div class="date">Professional Certifications</div>
+                <h3>ACCA & LCCI</h3>
+                <p>ACCA Registered (F3 Exemption obtained in 2020) | Completed LCCI Level 3 in 2014</p>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="date">Diploma</div>
+                <h3>Diploma in Management Accounting</h3>
+                <p>UK Certified Professional Qualification</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="date">Degree</div>
+                <h3>B.Sc. Chemistry</h3>
+                <p>Dagon University</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Muyar Moe | Prepared for Singapore Opportunities</p>
+    </footer>
+
+</body>
+</html>
