@@ -76,19 +76,42 @@
             display: flex; align-items: center; gap: 15px; font-weight: 600;
         }
         
-        /* Software Logos Grid */
-        .software-grid { 
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 25px; 
-        }
-        .software-item { 
-            display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            padding: 25px 15px; background: var(--beige); border-radius: 15px; 
-            transition: all 0.3s ease; gap: 15px; text-align: center; font-weight: 500; font-size: 0.95rem;
-        }
-        .software-item:hover { 
-            transform: translateY(-5px); background: var(--white); box-shadow: 0 10px 25px rgba(0,0,0,0.06); 
-        }
-        .software-item img { height: 50px; object-fit: contain; }
+       .software-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .software-item {
+        background: transparent; /* နောက်ခံအဖြူကို ဖြုတ်ရန် */
+        border: none;             /* အနားသတ်မျဉ်း ဖြုတ်ရန် */
+        border-radius: 0;
+        padding: 10px;
+        text-align: center;
+        width: 110px;
+        box-shadow: none;         /* အရိပ်ဖြုတ်ရန် */
+        transition: transform 0.3s ease;
+    }
+
+    .software-item:hover {
+        transform: translateY(-5px); /* Mouse တင်လျှင် အနည်းငယ် တက်မည် */
+    }
+
+    .software-item img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-bottom: 8px;
+    }
+
+    .software-item span {
+        font-size: 13px;
+        font-weight: 500;
+        color: #ffffff; /* စာသားအရောင်ကို ဖြူရောင်ပြောင်းရန် (နောက်ခံမှောင်နေလျှင်) */
+        display: block;
+    }
         
         /* Standard Skills */
         .skills-list { display: flex; flex-wrap: wrap; gap: 15px; }
