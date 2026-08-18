@@ -252,6 +252,50 @@
             color: #777;
             border-top: 1px solid #eaeaea;
         }
+            .software-item {
+        background: var(--white);
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        width: 130px;
+        transition: all 0.4s ease; /* ချောမွေ့စွာ ပြောင်းလဲရန် */
+        
+        /* 3D ဖြစ်စေရန် အခြေခံအုတ်မြစ် */
+        transform-style: preserve-3d;
+        perspective: 1000px; /* 3D အတိမ်အနက် */
+        
+        /* ပုံမှန်အနေအထားတွင် အရိပ်ပြားလေးသာ ထားမည် */
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .software-item:hover {
+        /* Mouse တင်လိုက်လျှင် ပုံကို အနည်းငယ် လှည့်မည် */
+        transform: rotateX(10deg) rotateY(10deg) translateZ(10px);
+        
+        /* 3D သက်ရောက်မှုရှိသော လှပသည့်အရိပ် */
+        box-shadow: -15px 20px 30px rgba(0,0,0,0.2);
+    }
+
+    /* ပုံကိုပါ 3D သက်ရောက်မှု ပိုရှိစေရန် */
+    .software-item img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+        margin-bottom: 10px;
+        
+        /* ပုံကို အနည်းငယ် အရှေ့သို့ ပို့ထားသည် */
+        transform: translateZ(20px); 
+        filter: brightness(1.02);
+    }
+    
+    /* စာသား */
+    .software-item span {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-dark);
+        display: block;
+        transform: translateZ(10px); /* စာသားကိုလည်း အနည်းငယ် ပို့ထားသည် */
+    }
     </style>
 </head>
 <body>
