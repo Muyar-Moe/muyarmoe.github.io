@@ -39,12 +39,28 @@
             background: rgba(244, 241, 234, 0.05); border-radius: 50%;
         }
 
-        .profile-wrapper { position: relative; display: inline-block; margin-bottom: 25px; z-index: 1; }
-        .profile-img { 
-            width: 190px; height: 190px; border-radius: 50%; 
-            border: 6px solid var(--beige); object-fit: cover; 
-            background-color: var(--white);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        .hero-image-wrapper {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+        .profile-img-3d {
+    position: absolute;
+    width: 190px;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    mask-image: radial-gradient(circle, black 50%, transparent 55%);
+    -webkit-mask-image: radial-gradient(circle, black 50%, transparent 55%);
+    bottom: -25px;
+    transition: transform 0.3s ease;
+}
+.profile-img-3d:hover {
+    transform: translateY(-5px);
         }
 
         .hero h1 { font-size: 3rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 5px; }
@@ -320,7 +336,7 @@
 
     <div class="hero">
         <div class="profile-wrapper">
-            <img src="Logo/Muyar Profile.png" alt="Muyar Moe" class="profile-img" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
+            <img src="Logo/Muyar Profile.png" alt="Muyar Moe" class="profile-img-3d" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
         </div>
         <h1>Muyar Moe</h1>
         <h2>Senior Accountant | Singapore Compliance Expert</h2>
@@ -392,7 +408,7 @@
             <h2 class="section-title"><i class="fas fa-user-graduate"></i> Education & Certifications</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <span class="date">ACCA </span>
+                    <span class="Present">ACCA </span>
                     <h3>ACCA / F3 Exemption</h3>
                     <p>Pursuing global accounting standard certifications to enhance financial advisory capabilities.</p>
                 </div>
@@ -407,7 +423,7 @@
                     <p>UK Certified professional qualification emphasizing strategic management and cost control.</p>
                 </div>
                 <div class="timeline-item">
-                    <span class="date">Undergraduate</span>
+                    <span class="2013">Graduated</span>
                     <h3>B.Sc. Chemistry</h3>
                     <p>Dagon University, Myanmar</p>
                 </div>
@@ -415,43 +431,6 @@
         </div>
 
     </div>
-<section class="timeline-section">
-    <h2>Professional Journey & Education</h2>
-    <div class="timeline-container">
-        
-       
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Accounting Experience</h3>
-                <span class="year">11 Years of Experience</span>
-                <p>Extensive professional experience working as an accountant in a medium-sized domestic construction company.</p>
-            </div>
-        </div>
-
-        <!-- ACCA -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>ACCA Studying</h3>
-                <span class="year">Present</span>
-                <p>Registered for ACCA and successfully obtained an F3 paper exemption.</p>
-            </div>
-        </div>
-
-        <!-- Diploma & LCCI -->
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>Qualifications & Certifications</h3>
-                <span class="year">2014 & Present</span>
-                <p>Holds a Diploma in Management Accounting, completed LCCI Level 3 in 2014, and holds a B.Sc. in Chemistry.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-    
 
     <footer>
         <p>&copy; 2026 Muyar Moe | Designed for Excellence</p>
