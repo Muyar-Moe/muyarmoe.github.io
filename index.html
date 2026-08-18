@@ -1,48 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muyar Moe - Accountant Resume</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
-        .logo-container { display: flex; gap: 20px; align-items: center; margin-top: 10px; }
-        .logo-container img { width: 80px; height: auto; border: 1px solid #ddd; padding: 5px; }
-        h2 { color: #2c3e50; border-bottom: 2px solid #2c3e50; }
+
+        /* Timeline */
+        .timeline { position: relative; padding-left: 30px; }
+        .timeline::before { 
+            content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--beige); 
+        }
+        .timeline-item { margin-bottom: 35px; position: relative; }
+        .timeline-item::before { 
+            content: ''; position: absolute; left: -36px; top: 5px; width: 14px; height: 14px; 
+            background: var(--deep-blue); border-radius: 50%; border: 3px solid var(--white); box-shadow: 0 0 0 3px var(--beige);
+        }
+        .timeline-item h3 { color: var(--deep-blue); font-size: 1.3rem; margin-bottom: 5px; }
+        .timeline-item .date { display: inline-block; background: var(--beige); color: var(--deep-blue); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
+        
+        footer { text-align: center; padding: 40px; color: var(--text-dark); opacity: 0.7; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <h1>Muyar Moe</h1>
-    <p>Accounts Executive | Financial Reporting | Full Set Accounting</p>
-
-    <h2>Technical Skills - Accounting Software</h2>
-    <div class="logo-container">
-        <!-- Logo file path တွေကို သင့် folder ထဲကအတိုင်း ပြင်ပေးပါ -->
-        <div>
-            <img src="xero-logo.png" alt="Xero">
-            <p>Xero</p>
+    <div class="hero">
+        <div class="profile-wrapper">
+            <img src="https://github.com/Muyar-Moe.png" alt="Muyar Moe" class="profile-img" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
         </div>
-        <div>
-            <img src="quickbooks-logo.png" alt="QuickBooks">
-            <p>QuickBooks</p>
-        </div>
-        <div>
-            <img src="myob-logo.png" alt="MYOB">
-            <p>MYOB</p>
-        </div>
-        <div>
-            <img src="tally-logo.png" alt="Tally ERP">
-            <p>Tally ERP</p>
-        </div>
-        <div>
-            <img src="zoho-logo.png" alt="Zoho">
-            <p>Zoho</p>
+        <h1>Muyar Moe</h1>
+        <h2>Senior Accountant | Singapore Compliance Expert</h2>
+        <p>Combining 11 years of deep financial expertise in the construction sector with modern accounting technologies to drive accurate reporting and business growth.</p>
+        
+        <div class="btn-group">
+            <a href="resume.pdf" target="_blank" class="btn btn-primary"><i class="fas fa-file-pdf"></i> Download Resume</a>
+            <a href="https://www.linkedin.com/in/muyarmoe2794/" target="_blank" class="btn btn-outline"><i class="fab fa-linkedin-in"></i> Connect on LinkedIn</a>
         </div>
     </div>
 
-    <h2>Summary</h2>
-    <p>Detail-oriented Accountant with 11 years of experience in full set accounting, taxation, and audit coordination[cite: 3].</p>
+    <div class="container">
+        
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-layer-group"></i> Software Proficiency</h2>
+            <div class="software-grid">
+                <!-- Colorful Logos included via CDN links -->
+                <div class="software-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" alt="Excel">
+                    <span>MS Excel</span>
+                </div>
+                <div class="software-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg" alt="Word">
+                    <span>MS Word</span>
+                </div>
+                <div class="software-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg" alt="PowerPoint">
+                    <span>PowerPoint</span>
+                </div>
+                <div class="software-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/xero.svg" alt="Xero">
+                    <span>Xero</span>
+                </div>
+                <div class="software-item">
+                    <img src="https://cdn.worldvectorlogo.com/logos/quickbooks-logo.svg" alt="QuickBooks">
+                    <span>QuickBooks</span>
+                </div>
+                <div class="software-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/MYOB_Logo.svg/512px-MYOB_Logo.svg.png" alt="MYOB">
+                    <span>MYOB</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-chart-pie"></i> Core Competencies</h2>
+            <div class="skills-list">
+                <div class="skill-tag">Full-Set Accounting</div>
+                <div class="skill-tag">SFRS Compliance</div>
+                <div class="skill-tag">GST & CPF Filings</div>
+                <div class="skill-tag">ECI Submission</div>
+                <div class="skill-tag">Construction Job Costing</div>
+                <div class="skill-tag">Financial Reporting</div>
+                <div class="skill-tag">Bank Reconciliation</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title"><i class="fas fa-user-graduate"></i> Education & Certifications</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="date">ACCA Registered (2020)</span>
+                    <h3>ACCA / F3 Exemption</h3>
+                    <p>Pursuing global accounting standard certifications to enhance financial advisory capabilities.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">Completed 2014</span>
+                    <h3>LCCI Level 3</h3>
+                    <p>Advanced diploma in accounting and finance.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">Professional Qualification</span>
+                    <h3>Diploma in Management Accounting</h3>
+                    <p>UK Certified professional qualification emphasizing strategic management and cost control.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="date">Undergraduate</span>
+                    <h3>B.Sc. Chemistry</h3>
+                    <p>Dagon University, Myanmar</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Muyar Moe | Designed for Excellence</p>
+    </footer>
 
 </body>
 </html>
