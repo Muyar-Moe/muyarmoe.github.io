@@ -151,8 +151,146 @@
             color: var(--text-dark);
             display: block;
         }
+            CSS
+        /* Timeline Styling */
+        .timeline-section {
+            margin-top: 40px;
+        }
+        .timeline-container {
+            position: relative;
+            margin-left: 20px;
+            padding-left: 20px;
+            border-left: 2px solid var(--deep-blue);
+            margin-top: 20px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -27px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--deep-blue);
+            border: 2px solid var(--white);
+        }
+        .timeline-content {
+            background: var(--white);
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+            border: 1px solid #eaeaea;
+        }
+        .timeline-content h3 {
+            font-size: 16px;
+            color: var(--deep-blue);
+            margin-bottom: 5px;
+        }
+        .timeline-content .year {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent-gold);
+            display: block;
+            margin-bottom: 8px;
+        }
+        .timeline-content p {
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+            /* Contact Section Styling */
+        .contact-section {
+            margin-top: 50px;
+            background: var(--beige);
+            padding: 30px;
+            border-radius: 12px;
+        }
+        .contact-section p {
+            margin-top: 10px;
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+        .contact-grid {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .contact-card {
+            background: var(--white);
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #eaeaea;
+        }
+        .contact-card:hover {
+            transform: translateY(-3px);
+            background-color: var(--deep-blue);
+            color: var(--white);
+        }
+        .contact-card i {
+            font-size: 18px;
+            color: var(--deep-blue);
+        }
+        .contact-card:hover i {
+            color: var(--accent-gold);
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 13px;
+            color: #777;
+            border-top: 1px solid #eaeaea;
+        }
     </style>
 </head>
+    HTML
+<section class="timeline-section">
+    <h2>Professional Journey & Education</h2>
+    <div class="timeline-container">
+        
+        <!-- လုပ်သက်အတွေ့အကြုံ -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Accounting Experience</h3>
+                <span class="year">11 Years of Experience</span>
+                <p>Extensive professional experience working as an accountant in a medium-sized domestic construction company.</p>
+            </div>
+        </div>
+
+        <!-- ACCA -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>ACCA Registration</h3>
+                <span class="year">2020</span>
+                <p>Registered for ACCA and successfully obtained an F3 paper exemption.</p>
+            </div>
+        </div>
+
+        <!-- Diploma & LCCI -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Qualifications & Certifications</h3>
+                <span class="year">2014 & Present</span>
+                <p>Holds a Diploma in Management Accounting, completed LCCI Level 3 in 2014, and holds a B.Sc. in Chemistry.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
 <body>
 
     <div class="hero">
@@ -242,6 +380,7 @@
         </div>
 
     </div>
+    
 
     <footer>
         <p>&copy; 2026 Muyar Moe | Designed for Excellence</p>
@@ -249,4 +388,28 @@
 
 </body>
 </html>
+HTML
+<section class="contact-section">
+    <h2>Get In Touch</h2>
+    <p>I am open to new opportunities and comfortable working in the West (Pioneer Area), including overtime during busy periods.</p>
+    
+    <div class="contact-grid">
+        <a href="mailto:your-email@example.com" class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <span>Email Me</span>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="contact-card">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn Profile</span>
+        </a>
+        <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Pioneer Area, West</span>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Muyar Moe. All Rights Reserved.</p>
+</footer>
 
