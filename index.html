@@ -10,12 +10,15 @@
         :root { --deep-blue: #1B365D; --white: #FFFFFF; --text-dark: #2C3E50; --accent-gold: #C5A880; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         
-        /* Accountant Watermark Background with Financial Symbols */
+        /* နမူနာပုံစံတူ အလင်းအမှောင်နှင့် ဂရပ်လိုင်း ရေစာနောက်ခံ */
         body { 
-            background-color: #0b192c;
+            background-color: #06101e;
             background-image: 
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Ctext x='10' y='40' fill='%23ffffff' fill-opacity='0.05' font-size='24' font-family='sans-serif'%3E$ 12.5%3C/text%3E%3Ctext x='90' y='110' fill='%23ffffff' fill-opacity='0.05' font-size='24' font-family='sans-serif'%3E-54.2%3C/text%3E%3Ctext x='40' y='145' fill='%23ffffff' fill-opacity='0.05' font-size='20' font-family='sans-serif'%3E%25%3C/text%3E%3C/svg%3E"),
-                linear-gradient(135deg, #0d1b2a 0%, #1b365d 50%, #1e3a8a 100%);
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Cg fill='%2360a5fa' fill-opacity='0.08'%3E%3Ctext x='20' y='60' font-size='32' font-weight='bold' font-family='sans-serif'%3E-54.2%3C/text%3E%3Ctext x='150' y='140' font-size='28' font-weight='bold' font-family='sans-serif'%3E12.53%3C/text%3E%3Ctext x='80' y='240' font-size='36' font-weight='bold' font-family='sans-serif'%3E-96.4%3C/text%3E%3C/g%3E%3Cpath d='M0,250 Q75,180 150,210 T300,120 L300,300 L0,300 Z' fill='%233b82f6' fill-opacity='0.12'/%3E%3Cpath d='M0,200 Q100,120 200,160 T300,80' fill='none' stroke='%2338bdf8' stroke-width='1.5' stroke-opacity='0.25'/%3E%3Ccircle cx='200' cy='160' r='3' fill='%2338bdf8' fill-opacity='0.5'/%3E%3Ccircle cx='300' cy='80' r='3' fill='%2338bdf8' fill-opacity='0.5'/%3E%3C/svg%3E"),
+                radial-gradient(circle at 15% 20%, rgba(29, 78, 216, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 85% 80%, rgba(30, 58, 138, 0.5) 0%, transparent 60%),
+                linear-gradient(135deg, #091e3a 0%, #0f172a 100%);
+            background-size: 300px 300px, 100% 100%, 100% 100%, 100% 100%;
             background-attachment: fixed;
             min-height: 100vh;
             color: #ffffff; 
@@ -23,13 +26,13 @@
         }
         
         /* Navbar */
-        .navbar { background: rgba(27, 54, 93, 0.85); padding: 20px 40px; display: flex; justify-content: flex-end; align-items: center; backdrop-filter: blur(5px); }
+        .navbar { background: rgba(15, 23, 42, 0.8); padding: 20px 40px; display: flex; justify-content: flex-end; align-items: center; backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.05); }
         .nav-links { display: flex; gap: 20px; }
         .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: var(--accent-gold); }
 
         /* Hero Section */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 40px 80px; gap: 40px; background: rgba(27, 54, 93, 0.6); color: var(--white); flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(3px); }
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 40px 80px; gap: 40px; background: rgba(15, 23, 42, 0.5); color: var(--white); flex-wrap: wrap; backdrop-filter: blur(4px); }
         .hero-text-side { flex: 1; min-width: 300px; }
         .hero-text-side h1 { font-size: 3rem; margin-bottom: 10px; }
         .hero-text-side p { font-size: 1.1rem; color: #EFEFEF; max-width: 600px; margin-bottom: 25px; }
@@ -41,7 +44,7 @@
             object-fit: cover;
             border-radius: 50%;
             border: 8px solid #FFFFFF; 
-            box-shadow: 0 0 0 8px #1B365D, 0 10px 25px rgba(0,0,0,0.4); 
+            box-shadow: 0 0 0 8px #1B365D, 0 10px 25px rgba(0,0,0,0.5); 
         }
 
         /* 3D ခလုတ် ပုံစံ */
@@ -49,20 +52,20 @@
             display: inline-block;
             padding: 12px 20px;
             margin: 5px 5px 5px 0;
-            background-color: #0d1b2a;
+            background-color: #09101d;
             color: #ffffff !important;
             text-decoration: none;
             font-weight: bold;
             border-radius: 8px;
             border: 1px solid rgba(255,255,255,0.2);
-            box-shadow: 0 4px 0 #050d14;
+            box-shadow: 0 4px 0 #02060d;
             text-align: center;
             transition: all 0.1s ease;
             width: 250px;
             overflow: hidden;
         }
         .btn:active {
-            box-shadow: 0 1px 0 #050d14;
+            box-shadow: 0 1px 0 #02060d;
             transform: translateY(3px);
         }
 
@@ -86,19 +89,20 @@
 
         .section-padding { padding: 60px 20px; }
         
-        /* Transparent Cards to show Watermark clearly */
+        /* Transparent Cards */
         .transparent-card { 
-            background: rgba(15, 23, 42, 0.7); 
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(11, 19, 36, 0.75); 
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             color: white;
         }
 
         /* Expertise Grid */
         .expertise-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 1100px; margin: 0 auto; }
-        .expertise-card { padding: 30px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .expertise-card { padding: 30px; border-radius: 10px; width: 300px; text-align: center; }
 
-        footer { text-align: center; padding: 20px; background: rgba(13, 27, 42, 0.9); color: white; margin-top: 40px; }
+        footer { text-align: center; padding: 20px; background: rgba(9, 15, 28, 0.9); color: white; margin-top: 40px; }
     </style>
 </head>
 <body>
