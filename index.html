@@ -23,18 +23,31 @@
         .hero-text-side { flex: 1; min-width: 300px; }
         .hero-text-side h1 { font-size: 3rem; margin-bottom: 10px; }
         .hero-text-side p { font-size: 1.1rem; color: #EFEFEF; max-width: 600px; margin-bottom: 25px; }
-        .btn { background-color: var(--beige); color: var(--deep-blue); padding: 12px 25px; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
-        
-        .profile-img-container { width: 300px; height: 300px; border-radius: 50%; overflow: hidden; border: 6px solid var(--beige); }
-        .profile-img-final { width: 100%; height: 100%; object-fit: cover; }
+        /* 3D ခလုတ် ပုံစံ */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    background-color: #1B365D; /* Navy Blue အရောင် */
+    color: #ffffff; /* စာသားအဖြူရောင် */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 6px 0 #0d1b2a; /* 3D အရိပ် */
+    transition: all 0.1s ease;
+    overflow: hidden;
+    width: 220px; /* ခလုတ်အကျယ် သတ်မှတ်ရန် */
+    text-align: center;
+}
 
-        /* Sections */
-        .section-padding { padding: 60px 80px; }
-        .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
-        .expertise-card { background: var(--white); padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        
-        footer { background: var(--deep-blue); color: white; text-align: center; padding: 30px; }
-        .marquee {
+/* ခလုတ်ကို နှိပ်လိုက်စဉ် */
+.btn:active {
+    box-shadow: 0 2px 0 #0d1b2a;
+    transform: translateY(4px);
+}
+
+/* စာသားပြေးနေစေရန် (Marquee Animation) */
+.marquee {
     overflow: hidden;
     white-space: nowrap;
     width: 100%;
@@ -43,7 +56,7 @@
 .marquee span {
     display: inline-block;
     padding-left: 100%;
-    animation: marquee 10s linear infinite;
+    animation: marquee 8s linear infinite;
 }
 
 @keyframes marquee {
@@ -68,10 +81,10 @@
             <h1>Muyar Moe</h1>
             <p>Senior Accountant with 11 years of deep financial expertise in the construction sector, specializing in Singapore tax compliance and modern accounting technologies.</p>
            <a href="CV/Muyar Accountant Resume.pdf" class="btn">
-    <div class="marquee"><span>📥 DOWNLOAD CV</span></div>
+    <div class="marquee"><span>📥 MY RESUME </span></div>
 </a>
 <a href="CV/Muyar Cover Letter.pdf" class="btn">
-    <div class="marquee"><span>📄 DOWNLOAD COVER LETTER</span></div>
+    <div class="marquee"><span>📄 MY COVER LETTER</span></div>
 </a>
         </div>
         <div class="profile-img-container">
