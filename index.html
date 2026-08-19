@@ -9,73 +9,92 @@
     <style>
         :root { --deep-blue: #1B365D; --beige: #F4F1EA; --white: #FFFFFF; --text-dark: #2C3E50; --accent-gold: #C5A880; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: var(--beige); color: var(--text-dark); line-height: 1.7; }
+        
+        body { 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: var(--text-dark); 
+            line-height: 1.7; 
+        }
         
         /* Navbar */
-        .navbar { background: var(--deep-blue); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
-        .navbar .logo { display: none; } /* ဘယ်ဘက်နာမည်ကို ဖျက်ရန် */
+        .navbar { background: var(--deep-blue); padding: 20px 40px; display: flex; justify-content: flex-end; align-items: center; }
         .nav-links { display: flex; gap: 20px; }
         .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: var(--accent-gold); }
 
-        /* Hero */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 20px 80px; gap: 40px; background: var(--deep-blue); color: var(--white); flex-wrap: wrap; }
+        /* Hero Section */
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 40px 80px; gap: 40px; background: var(--deep-blue); color: var(--white); flex-wrap: wrap; }
         .hero-text-side { flex: 1; min-width: 300px; }
         .hero-text-side h1 { font-size: 3rem; margin-bottom: 10px; }
         .hero-text-side p { font-size: 1.1rem; color: #EFEFEF; max-width: 600px; margin-bottom: 25px; }
+        
+        /* Profile Image Sizing (ပုံကြီးနေတာကို ပြင်ရန်) */
+        .profile-img-container img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--accent-gold);
+        }
+
         /* 3D ခလုတ် ပုံစံ */
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
-    margin: 5px;
-    background-color: #1B365D;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0 4px 0 #0d1b2a;
-    text-align: center;
-}
-.btn:active {
-    box-shadow: 0 1px 0 #0d1b2a;
-    transform: translateY(3px);
-}
-        body {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    background-attachment: fixed;
-    min-height: 100vh;
-}
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 5px 5px 5px 0;
+            background-color: #1B365D;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 4px 0 #0d1b2a;
+            text-align: center;
+            transition: all 0.1s ease;
+        }
+        .btn:active {
+            box-shadow: 0 1px 0 #0d1b2a;
+            transform: translateY(3px);
+        }
+
+        .section-padding { padding: 60px 20px; }
+        
+        /* Expertise Grid */
+        .expertise-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 1100px; margin: 0 auto; }
+        .expertise-card { background: white; padding: 30px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
+        footer { text-align: center; padding: 20px; background: var(--deep-blue); color: white; margin-top: 40px; }
     </style>
 </head>
 <body>
 
     <nav class="navbar">
-                <div class="nav-links">
+        <div class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About & Education</a>
             <a href="skills.html">Skills & Certificates</a>
             <a href="contact.html">Contact</a>
         </div>
     </nav>
-    <div class="contact-buttons" style="margin-top: 15px;">
-  <!-- Email Link (သင့်အီးမေးလ်လိပ်စာထည့်ပါ) -->
-  <a href="mailto:muyarmoe2714@gmail.com" class="btn" style="background-color: #d93025;">📧 </a>
-  
-  <!-- WhatsApp Link (သင့်ဖုန်းနံပါတ်ကို နိုင်ငံတကာ ကုဒ်နဲ့ ထည့်ပါ ဥပမာ- 65xxxxxxxx) -->
-  <a href="https://wa.me/+6585979328" target="_blank" class="btn" style="background-color: #25d366;">Logo/Whatsapp logo.png</a>
-</div>
 
     <div class="hero">
         <div class="hero-text-side">
             <h1>Muyar Moe</h1>
             <p>Senior Accountant with 11 years of deep financial expertise in the construction sector, specializing in Singapore tax compliance and modern accounting technologies.</p>
-           <a href="CV/Muyar Accountant Resume.pdf" class="btn">
-    <div class="marquee"><span>📥 MY RESUME </span></div>
-</a>
-<a href="CV/Muyar Cover Letter.pdf" class="btn">
-    <div class="marquee"><span>📄 MY COVER LETTER</span></div>
-</a>
+            
+            <div>
+                <a href="CV/Muyar Accountant Resume.pdf" class="btn" download>📥 MY RESUME</a>
+                <a href="CV/Muyar Cover Letter.pdf" class="btn" download>📄 MY COVER LETTER</a>
+            </div>
+
+            <!-- Email & WhatsApp Buttons -->
+            <div style="margin-top: 15px;">
+                <a href="mailto:muyarmoe2714@gmail.com" class="btn" style="background-color: #d93025;">📧 Email Me</a>
+                <a href="https://wa.me/6585979328" target="_blank" class="btn" style="background-color: #25d366;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
         </div>
+        
         <div class="profile-img-container">
             <img src="Logo/Muyar Profile.png" alt="Muyar Moe" class="profile-img-final">
         </div>
