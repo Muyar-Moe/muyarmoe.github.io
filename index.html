@@ -11,7 +11,11 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         
         body { 
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-color: #f4f1ea;
+            background-image: 
+                linear-gradient(rgba(27, 54, 93, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(27, 54, 93, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
             background-attachment: fixed;
             min-height: 100vh;
             color: var(--text-dark); 
@@ -32,12 +36,14 @@
         
         /* Profile Image Sizing (ပုံကြီးနေတာကို ပြင်ရန်) */
         .profile-img-container img {
-            width: 280px;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid var(--accent-gold);
-        }
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* အဝိုင်းပတ်လည်မှာ အပြာရောင်ဘောင်နှစ်ထပ်ဖြစ်စေရန် */
+    border: 8px solid #FFFFFF; 
+    box-shadow: 0 0 0 8px #1B365D; 
+}
 
         /* 3D ခလုတ် ပုံစံ */
         .btn {
@@ -84,8 +90,13 @@
             <p>Senior Accountant with 11 years of deep financial expertise in the construction sector, specializing in Singapore tax compliance and modern accounting technologies.</p>
             
             <div>
-                <a href="CV/Muyar Accountant Resume.pdf" class="btn" download>📥 MY RESUME</a>
-                <a href="CV/Muyar Cover Letter.pdf" class="btn" download>📄 MY COVER LETTER</a>
+
+                <a href="CV/Muyar Accountant Resume.pdf" class="btn">
+    <div class="marquee"><span>📥 DOWNLOAD MY RESUME </span></div>
+</a>
+<a href="CV/Muyar Cover Letter.pdf" class="btn">
+    <div class="marquee"><span>📄 DOWNLOAD MY COVER LETTER</span></div>
+</a>
             </div>
 
             <!-- Email & WhatsApp Buttons -->
