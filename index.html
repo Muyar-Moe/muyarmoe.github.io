@@ -7,30 +7,29 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --deep-blue: #1B365D; --beige: #F4F1EA; --white: #FFFFFF; --text-dark: #2C3E50; --accent-gold: #C5A880; }
+        :root { --deep-blue: #1B365D; --white: #FFFFFF; --text-dark: #2C3E50; --accent-gold: #C5A880; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         
-    body { 
-            background: linear-gradient(135deg, #0d1b2a 0%, #1b365d 50%, #2c3e50 100%);
+        /* Accountant Watermark Background with Financial Symbols */
+        body { 
+            background-color: #0b192c;
             background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                radial-gradient(circle at 20% 30%, rgba(52, 152, 219, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(41, 128, 185, 0.15) 0%, transparent 40%);
-            background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%;
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Ctext x='10' y='40' fill='%23ffffff' fill-opacity='0.05' font-size='24' font-family='sans-serif'%3E$ 12.5%3C/text%3E%3Ctext x='90' y='110' fill='%23ffffff' fill-opacity='0.05' font-size='24' font-family='sans-serif'%3E-54.2%3C/text%3E%3Ctext x='40' y='145' fill='%23ffffff' fill-opacity='0.05' font-size='20' font-family='sans-serif'%3E%25%3C/text%3E%3C/svg%3E"),
+                linear-gradient(135deg, #0d1b2a 0%, #1b365d 50%, #1e3a8a 100%);
             background-attachment: fixed;
             min-height: 100vh;
             color: #ffffff; 
             line-height: 1.7; 
         }
+        
         /* Navbar */
-        .navbar { background: var(--deep-blue); padding: 20px 40px; display: flex; justify-content: flex-end; align-items: center; }
+        .navbar { background: rgba(27, 54, 93, 0.85); padding: 20px 40px; display: flex; justify-content: flex-end; align-items: center; backdrop-filter: blur(5px); }
         .nav-links { display: flex; gap: 20px; }
         .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: var(--accent-gold); }
 
         /* Hero Section */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 40px 80px; gap: 40px; background: var(--deep-blue); color: var(--white); flex-wrap: wrap; }
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 40px 80px; gap: 40px; background: rgba(27, 54, 93, 0.6); color: var(--white); flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(3px); }
         .hero-text-side { flex: 1; min-width: 300px; }
         .hero-text-side h1 { font-size: 3rem; margin-bottom: 10px; }
         .hero-text-side p { font-size: 1.1rem; color: #EFEFEF; max-width: 600px; margin-bottom: 25px; }
@@ -42,7 +41,7 @@
             object-fit: cover;
             border-radius: 50%;
             border: 8px solid #FFFFFF; 
-            box-shadow: 0 0 0 8px #1B365D; 
+            box-shadow: 0 0 0 8px #1B365D, 0 10px 25px rgba(0,0,0,0.4); 
         }
 
         /* 3D ခလုတ် ပုံစံ */
@@ -50,23 +49,24 @@
             display: inline-block;
             padding: 12px 20px;
             margin: 5px 5px 5px 0;
-            background-color: #1B365D;
-            color: #ffffff;
+            background-color: #0d1b2a;
+            color: #ffffff !important;
             text-decoration: none;
             font-weight: bold;
             border-radius: 8px;
-            box-shadow: 0 4px 0 #0d1b2a;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 4px 0 #050d14;
             text-align: center;
             transition: all 0.1s ease;
             width: 250px;
             overflow: hidden;
         }
         .btn:active {
-            box-shadow: 0 1px 0 #0d1b2a;
+            box-shadow: 0 1px 0 #050d14;
             transform: translateY(3px);
         }
 
-        /* စာသားပြေးနေစေရန် Animation (ထည့်ရန်လိုနေသည့်နေရာ) */
+        /* စာသားပြေးနေစေရန် Animation */
         .marquee {
             overflow: hidden;
             white-space: nowrap;
@@ -75,6 +75,8 @@
         .marquee span {
             display: inline-block;
             padding-left: 100%;
+            color: #ffffff;
+            font-weight: bold;
             animation: marquee 8s linear infinite;
         }
         @keyframes marquee {
@@ -84,11 +86,19 @@
 
         .section-padding { padding: 60px 20px; }
         
+        /* Transparent Cards to show Watermark clearly */
+        .transparent-card { 
+            background: rgba(15, 23, 42, 0.7); 
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+
         /* Expertise Grid */
         .expertise-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 1100px; margin: 0 auto; }
-        .expertise-card { background: white; padding: 30px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .expertise-card { padding: 30px; border-radius: 10px; width: 300px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
 
-        footer { text-align: center; padding: 20px; background: var(--deep-blue); color: white; margin-top: 40px; }
+        footer { text-align: center; padding: 20px; background: rgba(13, 27, 42, 0.9); color: white; margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -118,7 +128,7 @@
 
             <!-- Email & WhatsApp Buttons -->
             <div style="margin-top: 15px;">
-                <a href="mailto:muyarmoe2714@gmail.com" class="btn" style="background-color: #d93025;">📧 Email Me</a>
+                <a href="mailto:muyarmoe2714@gmail.com" class="btn" style="background-color: #d93025;"><i class="fas fa-envelope"></i> Email Me</a>
                 <a href="https://wa.me/6585979328" target="_blank" class="btn" style="background-color: #25d366;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
         </div>
@@ -129,32 +139,34 @@
     </div>
 
     <!-- Summary Section -->
-    <section class="section-padding" style="background: rgba(255, 255, 255, 0.9); text-align: center;">
-        <h3 style="color: var(--deep-blue); font-size: 1.8rem; margin-bottom: 20px;">Why Choose Me?</h3>
-        <p style="max-width: 800px; margin: 0 auto; color: #555; line-height: 1.8;">
-            With over 11 years of professional experience as an accountant at a medium-sized construction company, I possess comprehensive knowledge in end-to-end financial reporting. 
-            I am highly proficient in Singapore's regulatory frameworks (GST, CPF, ECI, SGFRS) and comfortable working in fast-paced environments, including overtime when required.
-        </p>
+    <section class="section-padding" style="text-align: center;">
+        <div class="transparent-card" style="max-width: 800px; margin: 0 auto; padding: 35px; border-radius: 12px;">
+            <h3 style="color: var(--accent-gold); font-size: 1.8rem; margin-bottom: 20px;">Why Choose Me?</h3>
+            <p style="color: #EFEFEF; line-height: 1.8;">
+                With over 11 years of professional experience as an accountant at a medium-sized construction company, I possess comprehensive knowledge in end-to-end financial reporting. 
+                I am highly proficient in Singapore's regulatory frameworks (GST, CPF, ECI, SGFRS) and comfortable working in fast-paced environments, including overtime when required.
+            </p>
+        </div>
     </section>
 
     <!-- Expertise Section -->
     <section class="section-padding">
-        <h3 style="color: var(--deep-blue); font-size: 1.8rem; text-align: center; margin-bottom: 20px;">Core Expertise</h3>
+        <h3 style="color: var(--accent-gold); font-size: 1.8rem; text-align: center; margin-bottom: 25px;">Core Expertise</h3>
         <div class="expertise-grid">
-            <div class="expertise-card">
-                <i class="fas fa-chart-line" style="font-size: 2rem; color: var(--deep-blue);"></i>
-                <h4 style="margin: 15px 0;">Financial Reporting</h4>
-                <p>Accurate monthly, quarterly, and annual financial statements.</p>
+            <div class="expertise-card transparent-card">
+                <i class="fas fa-chart-line" style="font-size: 2rem; color: var(--accent-gold);"></i>
+                <h4 style="margin: 15px 0; color: #fff;">Financial Reporting</h4>
+                <p style="color: #ddd;">Accurate monthly, quarterly, and annual financial statements.</p>
             </div>
-            <div class="expertise-card">
-                <i class="fas fa-university" style="font-size: 2rem; color: var(--deep-blue);"></i>
-                <h4 style="margin: 15px 0;">Compliance Expert</h4>
-                <p>Expertise in GST, CPF, ECI, and SGFRS reporting requirements.</p>
+            <div class="expertise-card transparent-card">
+                <i class="fas fa-university" style="font-size: 2rem; color: var(--accent-gold);"></i>
+                <h4 style="margin: 15px 0; color: #fff;">Compliance Expert</h4>
+                <p style="color: #ddd;">Expertise in GST, CPF, ECI, and SGFRS reporting requirements.</p>
             </div>
-            <div class="expertise-card">
-                <i class="fas fa-laptop-code" style="font-size: 2rem; color: var(--deep-blue);"></i>
-                <h4 style="margin: 15px 0;">Tech Savvy</h4>
-                <p>Advanced proficiency in Xero, QuickBooks, and MYOB.</p>
+            <div class="expertise-card transparent-card">
+                <i class="fas fa-laptop-code" style="font-size: 2rem; color: var(--accent-gold);"></i>
+                <h4 style="margin: 15px 0; color: #fff;">Tech Savvy</h4>
+                <p style="color: #ddd;">Advanced proficiency in Xero, QuickBooks, and MYOB.</p>
             </div>
         </div>
     </section>
