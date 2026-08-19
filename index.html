@@ -13,13 +13,13 @@
         
         /* Navbar */
         .navbar { background: var(--deep-blue); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
-        .navbar .logo { color: var(--white); font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+        .navbar .logo { display: none; } /* ဘယ်ဘက်နာမည်ကို ဖျက်ရန် */
         .nav-links { display: flex; gap: 20px; }
         .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: var(--accent-gold); }
 
         /* Hero */
-        .hero { display: flex; align-items: center; justify-content: space-between; padding: 60px 80px; gap: 40px; background: var(--deep-blue); color: var(--white); flex-wrap: wrap; }
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 20px 80px; gap: 40px; background: var(--deep-blue); color: var(--white); flex-wrap: wrap; }
         .hero-text-side { flex: 1; min-width: 300px; }
         .hero-text-side h1 { font-size: 3rem; margin-bottom: 10px; }
         .hero-text-side p { font-size: 1.1rem; color: #EFEFEF; max-width: 600px; margin-bottom: 25px; }
@@ -34,13 +34,28 @@
         .expertise-card { background: var(--white); padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         
         footer { background: var(--deep-blue); color: white; text-align: center; padding: 30px; }
+        .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
     </style>
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="index.html" class="logo">Muyar Moe</a>
-        <div class="nav-links">
+                <div class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About & Education</a>
             <a href="skills.html">Skills & Certificates</a>
@@ -52,8 +67,12 @@
         <div class="hero-text-side">
             <h1>Muyar Moe</h1>
             <p>Senior Accountant with 11 years of deep financial expertise in the construction sector, specializing in Singapore tax compliance and modern accounting technologies.</p>
-           <a href="CV/Muyar Accountant Resume.pdf" class="btn"><i class="fas fa-file-download"></i> My Resume</a>
-<a href="CV/Muyar Cover Letter.pdf" class="btn"><i class="fas fa-file-download"></i> My Cover Letter</a>
+           <a href="CV/Muyar Accountant Resume.pdf" class="btn">
+    <div class="marquee"><span>📥 DOWNLOAD CV</span></div>
+</a>
+<a href="CV/Muyar Cover Letter.pdf" class="btn">
+    <div class="marquee"><span>📄 DOWNLOAD COVER LETTER</span></div>
+</a>
         </div>
         <div class="profile-img-container">
             <img src="Logo/Muyar Profile.png" alt="Muyar Moe" class="profile-img-final">
