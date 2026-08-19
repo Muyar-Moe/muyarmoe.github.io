@@ -26,42 +26,24 @@
         /* 3D ခလုတ် ပုံစံ */
 .btn {
     display: inline-block;
-    padding: 12px 25px;
-    margin: 10px;
-    background-color: #1B365D; /* Navy Blue အရောင် */
-    color: #ffffff; /* စာသားအဖြူရောင် */
+    padding: 12px 20px;
+    margin: 5px;
+    background-color: #1B365D;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 8px;
-    box-shadow: 0 6px 0 #0d1b2a; /* 3D အရိပ် */
-    transition: all 0.1s ease;
-    overflow: hidden;
-    width: 220px; /* ခလုတ်အကျယ် သတ်မှတ်ရန် */
+    box-shadow: 0 4px 0 #0d1b2a;
     text-align: center;
 }
-
-/* ခလုတ်ကို နှိပ်လိုက်စဉ် */
 .btn:active {
-    box-shadow: 0 2px 0 #0d1b2a;
-    transform: translateY(4px);
+    box-shadow: 0 1px 0 #0d1b2a;
+    transform: translateY(3px);
 }
-
-/* စာသားပြေးနေစေရန် (Marquee Animation) */
-.marquee {
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-}
-
-.marquee span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 8s linear infinite;
-}
-
-@keyframes marquee {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
+        body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
 }
     </style>
 </head>
@@ -75,6 +57,13 @@
             <a href="contact.html">Contact</a>
         </div>
     </nav>
+    <div class="contact-buttons" style="margin-top: 15px;">
+  <!-- Email Link (သင့်အီးမေးလ်လိပ်စာထည့်ပါ) -->
+  <a href="mailto:muyarmoe2714@gmail.com" class="btn" style="background-color: #d93025;">📧 </a>
+  
+  <!-- WhatsApp Link (သင့်ဖုန်းနံပါတ်ကို နိုင်ငံတကာ ကုဒ်နဲ့ ထည့်ပါ ဥပမာ- 65xxxxxxxx) -->
+  <a href="https://wa.me/+6585979328" target="_blank" class="btn" style="background-color: #25d366;">Logo/Whatsapp logo.png</a>
+</div>
 
     <div class="hero">
         <div class="hero-text-side">
