@@ -13,9 +13,10 @@
         body { 
             background-color: #f4f1ea;
             background-image: 
-                linear-gradient(rgba(27, 54, 93, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(27, 54, 93, 0.05) 1px, transparent 1px);
-            background-size: 30px 30px;
+                radial-gradient(rgba(27, 54, 93, 0.06) 2px, transparent 2px),
+                linear-gradient(rgba(27, 54, 93, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(27, 54, 93, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px, 20px 20px, 20px 20px;
             background-attachment: fixed;
             min-height: 100vh;
             color: var(--text-dark); 
@@ -34,16 +35,15 @@
         .hero-text-side h1 { font-size: 3rem; margin-bottom: 10px; }
         .hero-text-side p { font-size: 1.1rem; color: #EFEFEF; max-width: 600px; margin-bottom: 25px; }
         
-        /* Profile Image Sizing (ပုံကြီးနေတာကို ပြင်ရန်) */
+        /* Profile Image Ring Effect */
         .profile-img-container img {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 50%;
-    /* အဝိုင်းပတ်လည်မှာ အပြာရောင်ဘောင်နှစ်ထပ်ဖြစ်စေရန် */
-    border: 8px solid #FFFFFF; 
-    box-shadow: 0 0 0 8px #1B365D; 
-}
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid #FFFFFF; 
+            box-shadow: 0 0 0 8px #1B365D; 
+        }
 
         /* 3D ခလုတ် ပုံစံ */
         .btn {
@@ -58,10 +58,28 @@
             box-shadow: 0 4px 0 #0d1b2a;
             text-align: center;
             transition: all 0.1s ease;
+            width: 250px;
+            overflow: hidden;
         }
         .btn:active {
             box-shadow: 0 1px 0 #0d1b2a;
             transform: translateY(3px);
+        }
+
+        /* စာသားပြေးနေစေရန် Animation (ထည့်ရန်လိုနေသည့်နေရာ) */
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 8s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
         }
 
         .section-padding { padding: 60px 20px; }
@@ -90,13 +108,12 @@
             <p>Senior Accountant with 11 years of deep financial expertise in the construction sector, specializing in Singapore tax compliance and modern accounting technologies.</p>
             
             <div>
-
-                <a href="CV/Muyar Accountant Resume.pdf" class="btn">
-    <div class="marquee"><span>📥 DOWNLOAD MY RESUME </span></div>
-</a>
-<a href="CV/Muyar Cover Letter.pdf" class="btn">
-    <div class="marquee"><span>📄 DOWNLOAD MY COVER LETTER</span></div>
-</a>
+                <a href="CV/Muyar Accountant Resume.pdf" class="btn" download>
+                    <div class="marquee"><span>📥 DOWNLOAD MY RESUME</span></div>
+                </a>
+                <a href="CV/Muyar Cover Letter.pdf" class="btn" download>
+                    <div class="marquee"><span>📄 DOWNLOAD MY COVER LETTER</span></div>
+                </a>
             </div>
 
             <!-- Email & WhatsApp Buttons -->
@@ -112,7 +129,7 @@
     </div>
 
     <!-- Summary Section -->
-    <section class="section-padding" style="background: white; text-align: center;">
+    <section class="section-padding" style="background: rgba(255, 255, 255, 0.9); text-align: center;">
         <h3 style="color: var(--deep-blue); font-size: 1.8rem; margin-bottom: 20px;">Why Choose Me?</h3>
         <p style="max-width: 800px; margin: 0 auto; color: #555; line-height: 1.8;">
             With over 11 years of professional experience as an accountant at a medium-sized construction company, I possess comprehensive knowledge in end-to-end financial reporting. 
